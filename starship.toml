@@ -1,9 +1,6 @@
 add_newline = true #コマンドプロントの間に空行を追加
 
-[package]
-disabled = true
-
-scan_timeout = 10
+scan_timeout = 10 #タイムアウト時間を設定
 
 # Battery
 [battery]
