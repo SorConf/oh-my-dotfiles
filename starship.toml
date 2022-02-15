@@ -96,3 +96,51 @@ time_format = "%R"
 style = "bold green"
 symbol = "👩‍💻 "
 disabled = false
+# シェルプロンプトの間に空行を追加します
+add_newline = true
+
+# モジュールを無効にし、プロンプトから完全に隠します
+[package]
+disabled = true
+
+# タイムアウト時間
+scan_timeout = 10
+
+# バッテリー
+[battery]
+format = "[$symbol$percentage]($style) "
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 30
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+# Character
+[character]
+success_symbol = "[➜](bold green)" # コマンド成功時
+error_symbol = "[✗](bold red)"    # コマンド失敗時
+
+[time]
+disabled = false
+format = '[$time]($style) '
+style = "bold green"
+time_format = "%R"
+
+[sudo]
+style = "bold green"
+symbol = "👩‍💻 "
+disabled = false
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = " "
+style = "bold green"
