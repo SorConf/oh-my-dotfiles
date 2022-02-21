@@ -1,0 +1,5 @@
+[alias]
+    br = branch
+    cm = commit -m
+    ch = checkout
+    see = browse
