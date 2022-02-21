@@ -59,7 +59,6 @@ alias ll='ls -l' #llコマンド
 alias cl='clear' #clear略称
 alias mysqld='/Applications/XAMPP/bin/mysql -u root' #XAMPP用MySQL接続
 alias htdocs='cd /Applications/XAMPP/htdocs/'
-alias hal='cd ~/HAL'
 alias dnf='brew'
 alias h='history'
 alias to='touch'
@@ -74,7 +73,6 @@ alias bakz='sh /Users/narumi/rep/shsc/zshrcBak'
 alias bakv='sh /Users/narumi/rep/shsc/vimrcBak'
 alias qiita='open https://qiita.com/ -a "Brave Browser.app"'
 alias github='open https://github.com/ -a "Brave Browser.app"'
-
 
 
 # -----------------------------
