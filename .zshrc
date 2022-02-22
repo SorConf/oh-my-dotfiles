@@ -8,6 +8,7 @@
 # -----------------------------
 # General
 # -----------------------------
+
 setopt auto_cd #cd省略
 setopt no_beep #ピープ音を鳴らさないように変更
 setopt auto_param_keys #括弧の対応を自動補完
@@ -24,6 +25,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 大文字小文字を区�
 # -----------------------------
 # Color
 # -----------------------------
+
 autoload -Uz colors ; colors #色を使用
 export LSCOLORS=Exfxcxdxbxegedabagacad #色の設定
 export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30' # 補完時の色設定
@@ -32,6 +34,7 @@ autoload -U colors ; colors ; zstyle ':completion:*' list-colors "${LS_COLORS}" 
 # -----------------------------
 # History
 # -----------------------------
+
 setopt share_history #他のターミナルとヒストリーを共有
 setopt hist_ignore_all_dups #すでにhistoryにあるコマンドは残さない
 alias h='fc -lt '%F %T' 1' #historyに日付を表示
@@ -40,8 +43,9 @@ setopt inc_append_history # 履歴をすぐに追加する
 setopt hist_verify #ヒストリを呼び出してから実行する間に一旦編集できる状態になる
 
 # -----------------------------
-# App
+#  shortcut
 # -----------------------------
+
 alias tw='open /Applications/Twitter.app' #ツイアプリ起動
 alias slack='open /Applications/slack.app' #Slack起動
 alias vscode='open /Applications/Visual\ Studio\ Code.app' #vscode起動
@@ -51,33 +55,44 @@ alias safari='open /Applications/Safari.app' # safari起動
 alias xampp='open /Applications/XAMPP/manager-osx.app' #xampp-manager起動
 alias code='open -a /Applications/Visual\ Studio\ Code.app' #vscodeで起動
 alias brave='open -a "Brave Browser.app"'
+alias htdocs='cd /Applications/XAMPP/htdocs/'
+alias mysqld='/Applications/XAMPP/bin/mysql -u root' #XAMPP用MySQL接続
+alias qiita='open https://qiita.com/ -a "Brave Browser.app"'
+alias github='open https://github.com/ -a "Brave Browser.app"'
+alias snote='open https://app.simplenote.com -a "Brave Browser.app"'
 
 # -----------------------------
-# Alias
+# command Alias
 # -----------------------------
-alias ll='ls -l' #llコマンド
+
+alias ls='exa'
+alias ll='exa -ahl --git' #llコマンド
 alias cl='clear' #clear略称
-alias mysqld='/Applications/XAMPP/bin/mysql -u root' #XAMPP用MySQL接続
-alias htdocs='cd /Applications/XAMPP/htdocs/'
 alias dnf='brew'
 alias h='history'
 alias to='touch'
 alias b='bg'
 alias f='fg'
 alias g='grep'
+alias cat='bat'
 alias vi='vim'
+alias git see='hub see'
 alias vz='vim ~/.zshrc'
 alias re='source ~/.zshrc'
-alias baks='sh /Users/narumi/rep/shsc/starShipBak'
-alias bakz='sh /Users/narumi/rep/shsc/zshrcBak'
-alias bakv='sh /Users/narumi/rep/shsc/vimrcBak'
-alias qiita='open https://qiita.com/ -a "Brave Browser.app"'
-alias github='open https://github.com/ -a "Brave Browser.app"'
 
+# -----------------------------
+# start shellscript
+# -----------------------------
+
+alias baks='sh /Users/narumi/rep/sh/bak/starShipBak'
+alias bakz='sh /Users/narumi/rep/sh/bak/zshrcBak'
+alias bakv='sh /Users/narumi/rep/sh/bak/vimrcBak'
+alias qiitad='sh ${HOME}/rep/sh/qiitaMdDownloader'
 
 # -----------------------------
 # Other
 # -----------------------------
+
 # autpLs
 function chpwd() { ls }
 
@@ -115,3 +130,7 @@ function peco-cdr () {
 }
 zle -N peco-cdr
 bindkey '^e' peco-cdr
+
+
+#call starShip
+eval "$(starship init zsh)"
