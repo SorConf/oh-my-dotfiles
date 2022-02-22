@@ -1,4 +1,4 @@
 # oh-my-dotfiles
-macOSで使っているdotfileを置いてます
+macOSで使っているdotfile置き場
 ## starship
 https://starship.rs/
