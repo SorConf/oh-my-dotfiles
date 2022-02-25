@@ -135,7 +135,5 @@ bindkey '^e' peco-cdr
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-# call nodenv
-eval "$(nodenv init -)"
 # call starShip
 eval "$(starship init zsh)"
