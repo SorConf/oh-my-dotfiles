@@ -46,12 +46,12 @@ setopt hist_verify #ヒストリを呼び出してから実行する間に一旦
 #  shortcut
 # -----------------------------
 
-alias tw='open /Applications/Twitter.app' #ツイアプリ起動
-alias slack='open /Applications/slack.app' #Slack起動
-alias vscode='open /Applications/Visual\ Studio\ Code.app' #vscode起動
-alias google='open /Applications/Google\ Chrome.app//' #google起動
-alias vivaldi='open /Applications/Vivaldi.app' #vivaldi起動
-alias safari='open /Applications/Safari.app' # safari起動
+alias tw='open -a "Twitter.app"' #ツイアプリ起動
+alias slack='open -a "slack.app"' #Slack起動
+alias vscode='open -a "Visual\ Studio\ Code.app"' #vscode起動
+alias google='open -a "Google\ Chrome.app/"' #google起動
+alias vivaldi='open -a "Vivaldi.app"' #vivaldi起動
+alias safari='open -a "Safari.app"' # safari起動
 alias xampp='open /Applications/XAMPP/manager-osx.app' #xampp-manager起動
 alias code='open -a /Applications/Visual\ Studio\ Code.app' #vscodeで起動
 alias brave='open -a "Brave Browser.app"'
@@ -79,14 +79,16 @@ alias vi='vim'
 alias git see='hub see'
 alias vz='vim ~/.zshrc'
 alias re='source ~/.zshrc'
+alias see='hub see'
+alias npxre='npx create-react-app '
 
 # -----------------------------
 # start shellscript
 # -----------------------------
 
-alias baks='sh /Users/narumi/rep/sh/bak/starShipBak'
-alias bakz='sh /Users/narumi/rep/sh/bak/zshrcBak'
-alias bakv='sh /Users/narumi/rep/sh/bak/vimrcBak'
+alias baks='sh ${HOME}/rep/sh/bak/starShipBak'
+alias bakz='sh ${HOME}/rep/sh/bak/zshrcBak'
+alias bakv='sh ${HOME}/rep/sh/bak/vimrcBak'
 alias qiitad='sh ${HOME}/rep/sh/qiitaMdDownloader'
 
 # -----------------------------
@@ -131,6 +133,9 @@ function peco-cdr () {
 zle -N peco-cdr
 bindkey '^e' peco-cdr
 
-
-#call starShip
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+# call nodenv
+eval "$(nodenv init -)"
+# call starShip
 eval "$(starship init zsh)"
