@@ -64,6 +64,9 @@ alias mysqld='/Applications/XAMPP/bin/mysql -u root' #XAMPP用MySQL接続
 alias qiita='open https://qiita.com/ -a "Brave Browser.app"'
 alias github='open https://github.com/ -a "Brave Browser.app"'
 alias snote='open https://app.simplenote.com -a "Brave Browser.app"'
+alias cmd='cd $HOME/md'
+alias csh='cd $HOME/sh'
+alias crep='cd $HOME/rep'
 
 # -----------------------------
 # command Alias
@@ -94,7 +97,7 @@ alias ....='cd ../../..'
 # -----------------------------
 
 alias baks='sh ${HOME}/rep/sh/bak/starShipBak'
-alias bakz='sh ${HOME}/rep/sh/bak/zshrcBak'
+alias bakz='sh ${HOME}/rep/indv/sh/src/back/zshrcBak'
 alias bakv='sh ${HOME}/rep/sh/bak/vimrcBak'
 alias qiitad='sh ${HOME}/rep/sh/qiitaMdDownloader'
 
